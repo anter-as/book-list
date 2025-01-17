@@ -4,13 +4,25 @@
       <h2>Hi, {{ $name }}</h2>
       <p>Here's a list of your book reviews...</p>
     </div>
+
+    <form wire:submit="$refresh">
+      <span class="mr-2">Your Name:</span>
+      <input type="text" wire:model.live.debounce.500ms="name">
+    </form>
+
+    {{-- <form wire:submit="$refresh">
+      <span class="mr-2">Your Name: </span>
+      <input type="text" wire:model="name">
+      <button>Update</button>
+    </form> --}}
+
+    {{-- <form>
+      <span class="mr-2">Your Name: </span>
+      <input type="text" wire:model="name">
+      <button wire:click="$refresh">Update</button>
+    </form> --}}
   </header>
 
-  {{-- <div>
-    <p>Count: {{ $count }}</p>
-    <button wire:click="increment(1)">+1</button>
-    <button wire:click="increment(2)">+2</button>
-  </div> --}}
 
   <ul class="list">
     @foreach($books as $book)
