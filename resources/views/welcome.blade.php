@@ -4,12 +4,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Livewire Crash Course</title>
 
-  @vite('resources/css/app.css')
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  @livewireStyles
 </head>
 <body>
   <main>
     <h2>Welcome to the Livewire Crash Course!</h2>
-    <livewire:book-list>
+    <livewire:book-list />
   </main>
+
+  @livewireScripts
 </body>
 </html>
