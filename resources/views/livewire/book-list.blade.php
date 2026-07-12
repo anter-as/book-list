@@ -1,5 +1,5 @@
 <div>
-  <livewire:page-header subtitle="Here's a list of your books...">
+  <livewire:page-header subtitle="Here's a list of your books..." />
 
   {{-- search --}}
   <input 
